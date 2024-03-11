@@ -8,7 +8,7 @@ We provide code of training ResNet18 and ResNet50 with multiple breanches on CIF
 总的损失函数由三部分构成：
 + 标签与各个阶段的分类器中softmax层的输出做损失。
 
-+ 最深层的分类器中的softmax层的输出与其他各个分类器的softmax层的输出做损失。
++ 最深层的分类器中的softmax层前的输出logits与其他各个分类器的softmax层的输出做损失。
 
 + 最深层分类器里的特征图与其他分类器里的特征图做损失，bottleneck用来将浅层的特征图的形状与最深层分类器里的特征图对齐。
 

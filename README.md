@@ -20,8 +20,8 @@ python train.py train multi_resnet18_kd --resume ./save_checkpoints/multi_resnet
 相比于原来文件的改进：
 + 自己在train.py文件的基础上进行修改，修改后的文件名为train_nodistiller.py:
   此文件不采用知识蒸馏的形式训练resnet模型
-+ 将医院数据集搬入实验里,医院数据集的结构大致如下：
-  hospital_data
++ 将医院数据集搬入实验里,医院数据集的结构大致如下：<br>
+  hospital_data<br>
   ├── 1
   ├── 2
   ├── 3

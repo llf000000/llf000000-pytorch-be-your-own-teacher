@@ -30,25 +30,25 @@ python train.py train multi_resnet18_kd --resume ./save_checkpoints/multi_resnet
   ├── 6 <br>
   ├── 7 <br>
   ├── 8 <br>
-  首先需要通过split_data.py文件将医院分类好的数据集分为两份，train文件夹和val文件夹的结构大致如下：
-  ├── test
-│   ├── 1
-│   ├── 2
-│   ├── 3
-│   ├── 4
-│   ├── 5
-│   ├── 6
-│   ├── 7
-│   └── 8
+  首先需要通过split_data.py文件将医院分类好的数据集分为两份，train文件夹和val文件夹的结构大致如下：<br>
+  ├── test <br>
+│   ├── 1 <br>
+│   ├── 2 <br>
+│   ├── 3 <br>
+│   ├── 4 <br>
+│   ├── 5 <br>
+│   ├── 6 <br>
+│   ├── 7 <br>
+│   └── 8 <br>
 └── train
-    ├── 1
-    ├── 2
-    ├── 3
-    ├── 4
-    ├── 5
-    ├── 6
-    ├── 7
-    └── 8
+    ├── 1 <br>
+    ├── 2 <br>
+    ├── 3 <br>
+    ├── 4 <br>
+    ├── 5 <br>
+    ├── 6 <br>
+    ├── 7 <br>
+    └── 8 <br>
   
 ## Dependencies:
 

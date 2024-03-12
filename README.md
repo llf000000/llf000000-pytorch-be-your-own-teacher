@@ -40,7 +40,7 @@ python train.py train multi_resnet18_kd --resume ./save_checkpoints/multi_resnet
 │   ├── 6 <br>
 │   ├── 7 <br>
 │   └── 8 <br>
-└── train
+└── train <br>
     ├── 1 <br>
     ├── 2 <br>
     ├── 3 <br>

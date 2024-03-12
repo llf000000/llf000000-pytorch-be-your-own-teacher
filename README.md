@@ -49,7 +49,10 @@ python train.py train multi_resnet18_kd --resume ./save_checkpoints/multi_resnet
     ├── 6 <br>
     ├── 7 <br>
     └── 8 <br>
-  
++ 实验结果
+  只进行了一次实验：
+  + 将CIFAR数据集放入resnet18模型里，在只有100epochs的情况下，使用了知识蒸馏的准确率最高达到了77.34%；相比于没有使用知识蒸馏的准确率最高达到了76.46%
+  + 将医院数据集放入resnet18模型里，在只有200epochs的情况下，使用了知识蒸馏的准确率最高达到了61.382%
 ## Dependencies:
 
 + Ubuntu 18.04.5 LTS

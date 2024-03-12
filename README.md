@@ -16,6 +16,40 @@ We provide code of training ResNet18 and ResNet50 with multiple breanches on CIF
 + 通过添加 --resume 参数，用户可以在命令行中指定一个检查点文件的路径，用于恢复之前训练的模型状态。如果用户不指定 --resume 参数，则默认值为空字符串。
 python train.py train multi_resnet18_kd --resume ./save_checkpoints/multi_resnet18_kd/checkpoint_latest.pth.tar
 
+## MyExperiments
+相比于原来文件的改进：
++ 自己在train.py文件的基础上进行修改，修改后的文件名为train_nodistiller.py:
+  此文件不采用知识蒸馏的形式训练resnet模型
++ 将医院数据集搬入实验里,医院数据集的结构大致如下：
+  hospital_data
+  ├── 1
+  ├── 2
+  ├── 3
+  ├── 4
+  ├── 5
+  ├── 6
+  ├── 7
+  ├── 8
+  首先需要通过split_data.py文件将医院分类好的数据集分为两份，train文件夹和val文件夹的结构大致如下：
+  ├── test
+│   ├── 1
+│   ├── 2
+│   ├── 3
+│   ├── 4
+│   ├── 5
+│   ├── 6
+│   ├── 7
+│   └── 8
+└── train
+    ├── 1
+    ├── 2
+    ├── 3
+    ├── 4
+    ├── 5
+    ├── 6
+    ├── 7
+    └── 8
+  
 ## Dependencies:
 
 + Ubuntu 18.04.5 LTS

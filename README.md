@@ -21,15 +21,15 @@ python train.py train multi_resnet18_kd --resume ./save_checkpoints/multi_resnet
 + 自己在train.py文件的基础上进行修改，修改后的文件名为train_nodistiller.py:
   此文件不采用知识蒸馏的形式训练resnet模型
 + 将医院数据集搬入实验里,医院数据集的结构大致如下：<br>
-  hospital_data<br>
-  ├── 1
-  ├── 2
-  ├── 3
-  ├── 4
-  ├── 5
-  ├── 6
-  ├── 7
-  ├── 8
+  hospital_data <br>
+  ├── 1 <br>
+  ├── 2 <br>
+  ├── 3 <br>
+  ├── 4 <br>
+  ├── 5 <br>
+  ├── 6 <br>
+  ├── 7 <br>
+  ├── 8 <br>
   首先需要通过split_data.py文件将医院分类好的数据集分为两份，train文件夹和val文件夹的结构大致如下：
   ├── test
 │   ├── 1

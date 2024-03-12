@@ -1,3 +1,4 @@
+'''以下是CIFAR数据集的读取文件,如果要用这个文件,请将当前文件名“data_origion.py”改成“data.py”'''
 from __future__ import print_function
 
 import torch

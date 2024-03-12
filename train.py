@@ -86,7 +86,7 @@ def parse_args():
 
 def main():
     args = parse_args()
-    save_path = args.save_path = os.path.join(args.save_folder, args.arch) 
+    save_path = args.save_path = os.path.join(args.save_folder, args.arch)  # save_folder save_checkpoints/      'arch', metavar='ARCH', default='multi_resnet50_kd'
     '''
     --save-folder', default='save_checkpoints/'
         'arch', metavar='ARCH', default='multi_resnet50_kd'
@@ -453,10 +453,10 @@ def accuracy(output, target, topk=(1,)):
     return res
 
 def save_checkpoint(state, is_best, filename):
-    torch.save(state, filename)
+    torch.save(state, filename) 
     if is_best:
         save_path = os.path.dirname(filename)
-        shutil.copyfile(filename, os.path.join(save_path, 'model_best.path.tar'))
+        shutil.copyfile(filename, os.path.join(save_path, 'model_best.path.tar'))  # 使用shutil.copyfile方法将当前保存的检查点复制一份到相同目录下，并命名为model_best.path.tar
 
 if __name__ == '__main__':
     main()

@@ -50,14 +50,14 @@ python train.py train multi_resnet18_kd --resume ./save_checkpoints/multi_resnet
     ├── 7 <br>
     └── 8 <br>
 + 实验结果
-  只进行了一次实验：
+  只进行了一次实验： <br>
   + 将CIFAR数据集放入resnet18模型里，在只有100epochs的情况下，使用了知识蒸馏的准确率最高达到了77.34%；相比于没有使用知识蒸馏的准确率最高达到了76.46%
   + 将医院数据集放入resnet18模型里，在只有200epochs的情况下，使用了知识蒸馏的准确率最高达到了61.382%
   + 将医院数据集放入resnet50模型里，即在控制台输入python train.py train multi_resnet50_kd，首先报错：
-RuntimeError: CUDA out of memory. Tried to allocate 196.00 MiB (GPU 0; 23.65 GiB total capacity; 21.89 GiB already allocated; 2.06 MiB free; 22.21 GiB reserved in total by PyTorch)
-后来将batch_size改为8，再讲显卡换为autodl的2元/h的，就可以初步运行了，但是运行的时候老是报错：
-Traceback (most recent call last):
-  File "train.py", line 443, in <module>
+RuntimeError: CUDA out of memory. Tried to allocate 196.00 MiB (GPU 0; 23.65 GiB total capacity; 21.89 GiB already allocated; 2.06 MiB free; 22.21 GiB reserved in total by PyTorch) <br>
+后来将batch_size改为8，再将显卡换为autodl的2元/h的，就可以初步运行了，但是运行的时候老是报错： <br>
+Traceback (most recent call last): <br>
+  File "train.py", line 443, in <module> 
     main()
   File "train.py", line 91, in main
     run_training(args)
@@ -70,8 +70,8 @@ Traceback (most recent call last):
   File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/functional.py", line 2468, in cross_entropy
     return nll_loss(log_softmax(input, 1), target, weight, None, ignore_index, None, reduction)
   File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/functional.py", line 2260, in nll_loss
-    if input.size(0) != target.size(0):
-IndexError: dimension specified as 0 but tensor has no dimensions
+    if input.size(0) != target.size(0): <br>
+IndexError: dimension specified as 0 but tensor has no dimensions <br>
 我至今还未解决！
 ## Dependencies:
 
